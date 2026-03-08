@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CLI Reference — BrainBase Docs</title>
+<link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+
+<nav class="nav">
+  <button class="nav-hamburger" aria-label="Menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg></button>
+  <a href="/" class="nav-logo"><svg viewBox="0 0 100 100" fill="none"><defs><filter id="glow"><feGaussianBlur stdDeviation="2" result="g"/><feMerge><feMergeNode in="g"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs><circle cx="50" cy="20" r="8" fill="#00F0FF" filter="url(#glow)"/><circle cx="25" cy="70" r="8" fill="#00F0FF" filter="url(#glow)"/><circle cx="75" cy="70" r="8" fill="#00F0FF" filter="url(#glow)"/><line x1="50" y1="20" x2="25" y2="70" stroke="#00F0FF" stroke-width="2" filter="url(#glow)"/><line x1="50" y1="20" x2="75" y2="70" stroke="#00F0FF" stroke-width="2" filter="url(#glow)"/><line x1="25" y1="70" x2="75" y2="70" stroke="#00F0FF" stroke-width="2" filter="url(#glow)"/></svg><span>BrainBase <span class="nav-docs">Docs</span></span></a>
+  <div class="nav-search" role="button" tabindex="0"><kbd>&thinsp;&#8984;K&thinsp;</kbd><span>Search docs...</span></div>
+  <a href="https://github.com/noahsioo/brainbase" class="nav-github" target="_blank" rel="noopener" aria-label="GitHub"><svg viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg></a>
+</nav>
+
+<div class="layout">
+  <aside class="sidebar">
+    <button class="sidebar-close">&times;</button>
+    <div class="sidebar-category">Getting Started</div>
+    <a href="../getting-started/installation.html" class="sidebar-link">Installation</a>
+    <a href="../getting-started/quick-start.html" class="sidebar-link">Quick Start</a>
+    <a href="../getting-started/first-session.html" class="sidebar-link">First Session</a>
+    <div class="sidebar-category">CLI Reference</div>
+    <a href="../cli/" class="sidebar-link active">Commands</a>
+    <div class="sidebar-category">Providers</div>
+    <a href="../providers/" class="sidebar-link">Overview</a>
+    <a href="../providers/claude-code.html" class="sidebar-link">Claude Code</a>
+    <a href="../providers/cursor.html" class="sidebar-link">Cursor</a>
+    <a href="../providers/windsurf.html" class="sidebar-link">Windsurf</a>
+    <a href="../providers/openclaw.html" class="sidebar-link">OpenClaw</a>
+    <a href="../providers/codex.html" class="sidebar-link">Codex</a>
+    <a href="../providers/gemini.html" class="sidebar-link">Gemini</a>
+    <a href="../providers/aider.html" class="sidebar-link">Aider</a>
+    <a href="../providers/mcp.html" class="sidebar-link">Any MCP Client</a>
+    <div class="sidebar-category">Concepts</div>
+    <a href="../concepts/overview.html" class="sidebar-link">Overview</a>
+    <a href="../concepts/knowledge-graph.html" class="sidebar-link">Knowledge Graph</a>
+    <a href="../concepts/spreading-activation.html" class="sidebar-link">Spreading Activation</a>
+    <a href="../concepts/thalamus.html" class="sidebar-link">Thalamus</a>
+    <a href="../concepts/consolidation.html" class="sidebar-link">Consolidation</a>
+    <a href="../concepts/hunger.html" class="sidebar-link">Hunger System</a>
+    <a href="../concepts/development.html" class="sidebar-link">Development Phases</a>
+    <div class="sidebar-category">More</div>
+    <a href="../dashboard/" class="sidebar-link">Dashboard</a>
+    <a href="../architecture/" class="sidebar-link">Architecture</a>
+    <a href="../mechanisms/" class="sidebar-link">All 92 Mechanisms</a>
+    <a href="../privacy/" class="sidebar-link">Privacy & License</a>
+  </aside>
+  <div class="sidebar-overlay"></div>
+
+  <main class="main">
+    <div class="content">
+      <h1 data-animate>CLI Reference</h1>
+      <p class="page-desc" data-animate>All 14 commands to control your brain.</p>
+
+      <!-- init -->
+      <h2 id="init" data-animate>brainbase init</h2>
+      <p data-animate>Interactive setup wizard. Detects installed AI providers, configures integrations, sets up your LLM for knowledge extraction, and creates the brain database.</p>
+      <div class="code-block" data-animate>
+        <div class="code-header"><div class="code-dots"><span></span><span></span><span></span></div><span class="code-lang">bash</span><button class="code-copy" onclick="copyCode(this)">Copy</button></div>
+        <pre><code><span class="prompt">$</span> brainbase init</code></pre>
+      </div>
+
+      <!-- status -->
+      <h2 id="status" data-animate>brainbase status</h2>
+      <p data-animate>Shows brain health at a glance — initialization state, database status, watcher state, connected providers, and core statistics (nodes, edges, patterns).</p>
+      <div class="code-block" data-animate>
+        <div class="code-header"><div class="code-dots"><span></span><span></span><span></span></div><span class="code-lang">bash</span><button class="code-copy" onclick="copyCode(this)">Copy</button></div>
+        <pre><code><span class="prompt">$</span> brainbase status</code></pre>
+      </div>
+
+      <!-- search -->
+      <h2 id="search" data-animate>brainbase search</h2>
+      <p data-animate>Search the knowledge graph using spreading activation. Finds nodes matching your query and triggers connected memories — the same way thinking about "coffee" activates "morning" and "productivity".</p>
+      <div class="code-block" data-animate>
+        <div class="code-header"><div class="code-dots"><span></span><span></span><span></span></div><span class="code-lang">bash</span><button class="code-copy" onclick="copyCode(this)">Copy</button></div>
+        <pre><code><span class="prompt">$</span> brainbase search <span class="string">"typescript generics"</span></code></pre>
+      </div>
+      <div class="cmd-card" data-animate>
+        <h3>Options</h3>
+        <dl class="cmd-options">
+          <dt>-l, --limit &lt;n&gt;</dt>
+          <dd>Maximum number of results. Default: <code>20</code></dd>
+        </dl>
+      </div>
+
+      <!-- list -->
+      <h2 id="list" data-animate>brainbase list</h2>
+      <p data-animate>Shows recent memory nodes with their importance level, type, content snippet, creation date, and confidence score.</p>
+      <div class="code-block" data-animate>
+        <div class="code-header"><div class="code-dots"><span></span><span></span><span></span></div><span class="code-lang">bash</span><button class="code-copy" onclick="copyCode(this)">Copy</button></div>
+        <pre><code><span class="prompt">$</span> brainbase list
+<span class="prompt">$</span> brainbase list <span class="flag">--type</span> preference <span class="flag">--limit</span> 10</code></pre>
+      </div>
+      <div class="cmd-card" data-animate>
+        <h3>Options</h3>
+        <dl class="cmd-options">
+          <dt>-t, --type &lt;type&gt;</dt>
+          <dd>Filter by node type (fact, preference, decision, task, project, skill, person, event)</dd>
+          <dt>-l, --limit &lt;n&gt;</dt>
+          <dd>Maximum number of results. Default: <code>20</code></dd>
+        </dl>
+      </div>
+
+      <!-- hot -->
+      <h2 id="hot" data-animate>brainbase hot</h2>
+      <p data-animate>Shows the most activated nodes right now and generates a context briefing — the same narrative your AI receives. Useful for understanding what the brain is "thinking about".</p>
+      <div class="code-block" data-animate>
+        <div class="code-header"><div class="code-dots"><span></span><span></span><span></span></div><span class="code-lang">bash</span><button class="code-copy" onclick="copyCode(this)">Copy</button></div>
+        <pre><code><span class="prompt">$</span> brainbase hot
+<span class="prompt">$</span> brainbase hot <span class="flag">--detail</span> MAXIMUM <span class="flag">--topic</span> <span class="string">"auth system"</span></code></pre>
+      </div>
+      <div class="cmd-card" data-animate>
+        <h3>Options</h3>
+        <dl class="cmd-options">
+          <dt>-d, --detail &lt;mode&gt;</dt>
+          <dd>Context detail level: <code>MAXIMUM</code> | <code>STANDARD</code> | <code>LIGHT</code> | <code>MINIMAL</code></dd>
+          <dt>-t, --topic &lt;topic&gt;</dt>
+          <dd>Focus activation on a specific topic</dd>
+        </dl>
+      </div>
+
+      <!-- stats -->
+      <h2 id="stats" data-animate>brainbase stats</h2>
+      <p data-animate>Detailed brain statistics — total nodes, edges, active nodes, patterns, sessions. Includes type breakdown with bar charts, edge type distribution, latest session info, and critical period indicator (shows if your brain has fewer than 20 sessions).</p>
+      <div class="code-block" data-animate>
+        <div class="code-header"><div class="code-dots"><span></span><span></span><span></span></div><span class="code-lang">bash</span><button class="code-copy" onclick="copyCode(this)">Copy</button></div>
+        <pre><code><span class="prompt">$</span> brainbase stats</code></pre>
+      </div>
+
+      <!-- add -->
+      <h2 id="add" data-animate>brainbase add</h2>
+      <p data-animate>Manually add knowledge to your brain. Useful for seeding important facts, preferences, or project context. Automatically links to existing related nodes.</p>
+      <div class="code-block" data-animate>
+        <div class="code-header"><div class="code-dots"><span></span><span></span><span></span></div><span class="code-lang">bash</span><button class="code-copy" onclick="copyCode(this)">Copy</button></div>
+        <pre><code><span class="prompt">$</span> brainbase add <span class="string">"I prefer functional components over class components"</span>
+<span class="prompt">$</span> brainbase add <span class="string">"Project uses PostgreSQL"</span> <span class="flag">--type</span> fact <span class="flag">--importance</span> 0.9</code></pre>
+      </div>
+      <div class="cmd-card" data-animate>
+        <h3>Options</h3>
+        <dl class="cmd-options">
+          <dt>-t, --type &lt;type&gt;</dt>
+          <dd><code>fact</code> | <code>preference</code> | <code>decision</code> | <code>task</code> | <code>project</code> | <code>skill</code> | <code>person</code> | <code>event</code>. Default: <code>fact</code></dd>
+          <dt>-i, --importance &lt;n&gt;</dt>
+          <dd>Importance weight (0-1). Default: <code>0.7</code></dd>
+          <dt>-s, --source &lt;src&gt;</dt>
+          <dd>Source label. Default: <code>manual</code></dd>
+          <dt>-c, --confidence &lt;n&gt;</dt>
+          <dd>Confidence score (0-1). Default: <code>1.0</code></dd>
+        </dl>
+      </div>
+
+      <!-- forget -->
+      <h2 id="forget" data-animate>brainbase forget</h2>
+      <p data-animate>Delete specific memories from the knowledge graph. Searches for nodes matching the query and removes them permanently. GDPR-compliant — your right to be forgotten.</p>
+      <div class="code-block" data-animate>
+        <div class="code-header"><div class="code-dots"><span></span><span></span><span></span></div><span class="code-lang">bash</span><button class="code-copy" onclick="copyCode(this)">Copy</button></div>
+        <pre><code><span class="prompt">$</span> brainbase forget <span class="string">"old project name"</span></code></pre>
+      </div>
+
+      <!-- watcher -->
+      <h2 id="watcher" data-animate>brainbase watcher</h2>
+      <p data-animate>Control the background daemon that processes memories, runs consolidation cycles, and keeps the brain alive. Runs on HTTP port 7899.</p>
+      <div class="code-block" data-animate>
+        <div class="code-header"><div class="code-dots"><span></span><span></span><span></span></div><span class="code-lang">bash</span><button class="code-copy" onclick="copyCode(this)">Copy</button></div>
+        <pre><code><span class="prompt">$</span> brainbase watcher start   <span class="comment"># Start the daemon</span>
+<span class="prompt">$</span> brainbase watcher stop    <span class="comment"># Stop the daemon</span>
+<span class="prompt">$</span> brainbase watcher status  <span class="comment"># Check status + LLM connection</span></code></pre>
+      </div>
+
+      <!-- consolidate -->
+      <h2 id="consolidate" data-animate>brainbase consolidate</h2>
+      <p data-animate>Trigger a manual consolidation cycle. Normally runs automatically every 6 hours. Prunes weak edges, promotes important nodes, merges duplicates, finds creative connections (REM-style), detects knowledge gaps, and distills clusters into schemas.</p>
+      <div class="code-block" data-animate>
+        <div class="code-header"><div class="code-dots"><span></span><span></span><span></span></div><span class="code-lang">bash</span><button class="code-copy" onclick="copyCode(this)">Copy</button></div>
+        <pre><code><span class="prompt">$</span> brainbase consolidate
+<span class="output">Edges pruned:         12</span>
+<span class="output">Nodes promoted:        3</span>
+<span class="output">Nodes merged:          2</span>
+<span class="output">Patterns created:      1</span>
+<span class="output">Dream edges:           4</span>
+<span class="output">Duration:          2.3s</span></code></pre>
+      </div>
+
+      <!-- verify -->
+      <h2 id="verify" data-animate>brainbase verify</h2>
+      <p data-animate>Run a 6-step brain integrity check. Validates config, database (15 tables), core nodes, hooks, signal strength, and spreading activation. Useful for debugging or after updates.</p>
+      <div class="code-block" data-animate>
+        <div class="code-header"><div class="code-dots"><span></span><span></span><span></span></div><span class="code-lang">bash</span><button class="code-copy" onclick="copyCode(this)">Copy</button></div>
+        <pre><code><span class="prompt">$</span> brainbase verify
+<span class="output">[1/6] Config .............. OK</span>
+<span class="output">[2/6] Database (15 tables)  OK</span>
+<span class="output">[3/6] Core Nodes .......... OK</span>
+<span class="output">[4/6] Hooks (4 events) .... OK</span>
+<span class="output">[5/6] Signal Strength ..... OK</span>
+<span class="output">[6/6] Spreading Activation  OK</span></code></pre>
+      </div>
+
+      <!-- snapshot -->
+      <h2 id="snapshot" data-animate>brainbase snapshot</h2>
+      <p data-animate>View the brain's growth over time. Shows a timeline of snapshots with node count, edge count, patterns, and top topics at each point.</p>
+      <div class="code-block" data-animate>
+        <div class="code-header"><div class="code-dots"><span></span><span></span><span></span></div><span class="code-lang">bash</span><button class="code-copy" onclick="copyCode(this)">Copy</button></div>
+        <pre><code><span class="prompt">$</span> brainbase snapshot
+<span class="prompt">$</span> brainbase snapshot <span class="flag">--count</span> 20</code></pre>
+      </div>
+      <div class="cmd-card" data-animate>
+        <h3>Options</h3>
+        <dl class="cmd-options">
+          <dt>-n, --count &lt;number&gt;</dt>
+          <dd>Number of snapshots to show. Default: <code>10</code></dd>
+        </dl>
+      </div>
+
+      <!-- dashboard -->
+      <h2 id="dashboard" data-animate>brainbase dashboard</h2>
+      <p data-animate>Launch the interactive 3D brain visualization in your browser. Shows the knowledge graph as a force-directed network with real-time activation levels, brain health metrics, and session history.</p>
+      <div class="code-block" data-animate>
+        <div class="code-header"><div class="code-dots"><span></span><span></span><span></span></div><span class="code-lang">bash</span><button class="code-copy" onclick="copyCode(this)">Copy</button></div>
+        <pre><code><span class="prompt">$</span> brainbase dashboard
+<span class="prompt">$</span> brainbase dashboard <span class="flag">--port</span> 8080</code></pre>
+      </div>
+      <div class="cmd-card" data-animate>
+        <h3>Options</h3>
+        <dl class="cmd-options">
+          <dt>-p, --port &lt;port&gt;</dt>
+          <dd>HTTP port for the dashboard server. Default: <code>7877</code></dd>
+        </dl>
+        <p style="margin-top:12px">Exposes 7 API endpoints: <code>/api/graph</code>, <code>/api/expertise</code>, <code>/api/sessions</code>, <code>/api/patterns</code>, <code>/api/snapshots</code>, <code>/api/activity</code>, <code>/api/health</code></p>
+      </div>
+
+      <!-- embed -->
+      <h2 id="embed" data-animate>brainbase embed</h2>
+      <p data-animate>Manage vector embeddings for hybrid search (spreading activation + semantic similarity). Uses text-embedding-3-small.</p>
+      <div class="code-block" data-animate>
+        <div class="code-header"><div class="code-dots"><span></span><span></span><span></span></div><span class="code-lang">bash</span><button class="code-copy" onclick="copyCode(this)">Copy</button></div>
+        <pre><code><span class="prompt">$</span> brainbase embed status     <span class="comment"># Show embedding coverage %</span>
+<span class="prompt">$</span> brainbase embed backfill   <span class="comment"># Create embeddings for unembedded nodes</span>
+<span class="prompt">$</span> brainbase embed backfill <span class="flag">--batch</span> 50</code></pre>
+      </div>
+      <div class="cmd-card" data-animate>
+        <h3>Subcommands</h3>
+        <dl class="cmd-options">
+          <dt>status</dt>
+          <dd>Shows what percentage of nodes have embeddings</dd>
+          <dt>backfill</dt>
+          <dd>Generate embeddings for all nodes that don't have them yet</dd>
+        </dl>
+        <h3 style="margin-top:16px">Backfill Options</h3>
+        <dl class="cmd-options">
+          <dt>-b, --batch &lt;size&gt;</dt>
+          <dd>Batch size for embedding generation</dd>
+        </dl>
+      </div>
+
+      <div class="page-nav" data-animate>
+        <a href="../getting-started/first-session.html" class="page-nav-link prev">
+          <span class="page-nav-label">Previous</span>
+          <span class="page-nav-title">&larr; First Session</span>
+        </a>
+        <a href="../providers/" class="page-nav-link next">
+          <span class="page-nav-label">Next</span>
+          <span class="page-nav-title">Providers &rarr;</span>
+        </a>
+      </div>
+
+      <div class="footer">
+        <span>BrainBase</span>
+        <div class="footer-links"><a href="https://github.com/noahsioo/brainbase" target="_blank" rel="noopener">GitHub</a><a href="https://brainbase.dev">Website</a></div>
+      </div>
+    </div>
+
+    <aside class="toc">
+      <div class="toc-title">On this page</div>
+      <a href="#init" class="toc-link">init</a>
+      <a href="#status" class="toc-link">status</a>
+      <a href="#search" class="toc-link">search</a>
+      <a href="#list" class="toc-link">list</a>
+      <a href="#hot" class="toc-link">hot</a>
+      <a href="#stats" class="toc-link">stats</a>
+      <a href="#add" class="toc-link">add</a>
+      <a href="#forget" class="toc-link">forget</a>
+      <a href="#watcher" class="toc-link">watcher</a>
+      <a href="#consolidate" class="toc-link">consolidate</a>
+      <a href="#verify" class="toc-link">verify</a>
+      <a href="#snapshot" class="toc-link">snapshot</a>
+      <a href="#dashboard" class="toc-link">dashboard</a>
+      <a href="#embed" class="toc-link">embed</a>
+    </aside>
+  </main>
+</div>
+
+<div class="search-overlay"><div class="search-modal"><input type="text" class="search-input" placeholder="Search docs..."><div class="search-results"></div></div></div>
+<svg class="noise"><filter id="noiseFilter"><feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch"/></filter><rect width="100%" height="100%" filter="url(#noiseFilter)"/></svg>
+<script src="../docs.js"></script>
+</body>
+</html>

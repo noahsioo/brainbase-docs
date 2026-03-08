@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>How It Works — BrainBase Docs</title><link rel="stylesheet" href="../styles.css"></head>
+<body>
+<nav class="nav"><button class="nav-hamburger" aria-label="Menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg></button><a href="/" class="nav-logo"><svg viewBox="0 0 100 100" fill="none"><defs><filter id="glow"><feGaussianBlur stdDeviation="2" result="g"/><feMerge><feMergeNode in="g"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs><circle cx="50" cy="20" r="8" fill="#00F0FF" filter="url(#glow)"/><circle cx="25" cy="70" r="8" fill="#00F0FF" filter="url(#glow)"/><circle cx="75" cy="70" r="8" fill="#00F0FF" filter="url(#glow)"/><line x1="50" y1="20" x2="25" y2="70" stroke="#00F0FF" stroke-width="2" filter="url(#glow)"/><line x1="50" y1="20" x2="75" y2="70" stroke="#00F0FF" stroke-width="2" filter="url(#glow)"/><line x1="25" y1="70" x2="75" y2="70" stroke="#00F0FF" stroke-width="2" filter="url(#glow)"/></svg><span>BrainBase <span class="nav-docs">Docs</span></span></a><div class="nav-search" role="button" tabindex="0"><kbd>&thinsp;&#8984;K&thinsp;</kbd><span>Search docs...</span></div><a href="https://github.com/noahsioo/brainbase" class="nav-github" target="_blank" rel="noopener" aria-label="GitHub"><svg viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg></a></nav>
+<div class="layout">
+  <aside class="sidebar"><button class="sidebar-close">&times;</button><div class="sidebar-category">Getting Started</div><a href="../getting-started/installation.html" class="sidebar-link">Installation</a><a href="../getting-started/quick-start.html" class="sidebar-link">Quick Start</a><a href="../getting-started/first-session.html" class="sidebar-link">First Session</a><div class="sidebar-category">CLI Reference</div><a href="../cli/" class="sidebar-link">Commands</a><div class="sidebar-category">Providers</div><a href="../providers/" class="sidebar-link">Overview</a><a href="../providers/claude-code.html" class="sidebar-link">Claude Code</a><a href="../providers/cursor.html" class="sidebar-link">Cursor</a><a href="../providers/windsurf.html" class="sidebar-link">Windsurf</a><a href="../providers/openclaw.html" class="sidebar-link">OpenClaw</a><a href="../providers/codex.html" class="sidebar-link">Codex</a><a href="../providers/gemini.html" class="sidebar-link">Gemini</a><a href="../providers/aider.html" class="sidebar-link">Aider</a><a href="../providers/mcp.html" class="sidebar-link">Any MCP Client</a><div class="sidebar-category">Concepts</div><a href="../concepts/overview.html" class="sidebar-link active">Overview</a><a href="../concepts/knowledge-graph.html" class="sidebar-link">Knowledge Graph</a><a href="../concepts/spreading-activation.html" class="sidebar-link">Spreading Activation</a><a href="../concepts/thalamus.html" class="sidebar-link">Thalamus</a><a href="../concepts/consolidation.html" class="sidebar-link">Consolidation</a><a href="../concepts/hunger.html" class="sidebar-link">Hunger System</a><a href="../concepts/development.html" class="sidebar-link">Development Phases</a><div class="sidebar-category">More</div><a href="../dashboard/" class="sidebar-link">Dashboard</a><a href="../architecture/" class="sidebar-link">Architecture</a><a href="../mechanisms/" class="sidebar-link">All 92 Mechanisms</a><a href="../privacy/" class="sidebar-link">Privacy & License</a></aside>
+  <div class="sidebar-overlay"></div>
+  <main class="main"><div class="content">
+    <h1 data-animate>How BrainBase Works</h1>
+    <p class="page-desc" data-animate>Not a memory plugin. An actual brain.</p>
+
+    <h2 id="problem" data-animate>The problem</h2>
+    <p data-animate>Every AI starts from zero. Every session. Every time.</p>
+    <p data-animate>It doesn't know your name. It doesn't know your stack. It doesn't know that you've explained the same architecture three times this week. You tell it you're building a React app — and tomorrow it'll ask you what framework you use.</p>
+    <p data-animate>The current "solutions"? A vector database that keyword-matches your old messages. A RAG wrapper that dumps 50 random chunks into the context window. A <code>.md</code> file you manually maintain. None of them actually <em>understand</em> anything. They just search text.</p>
+
+    <h2 id="brain" data-animate>The mouth vs. the brain</h2>
+    <p data-animate>The AI you use — Claude Code, Cursor, Gemini, Codex, any of them — is just the <strong>mouth</strong>. It vibrates. It produces words. But it doesn't think. It doesn't remember. It doesn't learn.</p>
+    <p data-animate>BrainBase is the <strong>brain</strong>. 92 documented neuroscience mechanisms — how the human brain stores, retrieves, connects, and strengthens memories — translated into code.</p>
+    <p data-animate>Same personality. Same memories. Same knowledge. No matter which AI you talk through. Switch from Cursor to Claude Code mid-project. BrainBase doesn't care. It knows you. It picks up where you left off.</p>
+
+    <h2 id="different" data-animate>Why this is different</h2>
+    <table data-animate>
+      <thead><tr><th></th><th>Vector search / RAG</th><th>BrainBase</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Storage</strong></td><td>Chunks of text in a database</td><td>Knowledge graph — entities, relationships, weighted edges</td></tr>
+        <tr><td><strong>Retrieval</strong></td><td>Keyword/embedding similarity</td><td>Spreading activation — memories trigger connected memories</td></tr>
+        <tr><td><strong>Learning</strong></td><td>None</td><td>Hebbian learning — "fire together, wire together"</td></tr>
+        <tr><td><strong>Filtering</strong></td><td>None — everything stored</td><td>Thalamus — only important signals pass through</td></tr>
+        <tr><td><strong>Over time</strong></td><td>Gets slower, noisier</td><td>Gets smarter — consolidation prunes noise, strengthens patterns</td></tr>
+        <tr><td><strong>Background</strong></td><td>Dead between sessions</td><td>Alive — sleep cycles, replay, creative connections</td></tr>
+        <tr><td><strong>Self-awareness</strong></td><td>None</td><td>Metacognition — the brain knows what it knows and what it doesn't</td></tr>
+      </tbody>
+    </table>
+
+    <h2 id="flow" data-animate>Data flow</h2>
+    <div class="code-block" data-animate><div class="code-header"><div class="code-dots"><span></span><span></span><span></span></div><span class="code-lang">Architecture</span></div>
+      <pre><code>You talk to any AI
+       |
+  1. Thalamus filters — only important signals pass
+       |
+  2. 6 Senses analyze — code, tone, emotion, health, stability, context
+       |
+  3. Extraction pulls entities + relationships
+       |
+  4. Knowledge Graph stores as interconnected nodes
+       |
+  5. Spreading Activation retrieves relevant context
+       |
+  6. Context Generator builds a narrative briefing
+       |
+  Your AI now knows you</code></pre>
+    </div>
+
+    <h2 id="alive" data-animate>The brain is alive</h2>
+    <p data-animate>This isn't a database that waits for queries. BrainBase runs continuously:</p>
+    <ul data-animate>
+      <li><strong>Sleep cycles</strong> — every 6 hours, consolidation strengthens important memories and finds creative connections</li>
+      <li><strong>Hunger</strong> — the brain detects knowledge gaps and drives your AI to ask the right questions. Not because you told it to — because it <em>wants</em> to know</li>
+      <li><strong>Development</strong> — a new brain is curious about everything. After hundreds of sessions, it matures: selective, fast, deep schemas</li>
+      <li><strong>Self-awareness</strong> — the brain monitors itself. Too much noise? Raises thresholds. Knowledge fragmented? Triggers consolidation</li>
+    </ul>
+
+    <div class="callout brain" data-animate>
+      <div class="callout-icon"><svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 2C5.58 2 2 5.58 2 10s3.58 8 8 8 8-3.58 8-8-3.58-8-8-8zm1 12H9v-2h2v2zm1.07-5.25l-.9.92C10.45 10.4 10 11 10 12H8v-.5c0-.83.45-1.59 1.17-2.17l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2s-2 .9-2 2H5c0-1.66 1.34-3 3-3s3 1.34 3 3c0 .66-.27 1.26-.93 1.66z"/></svg></div>
+      <div class="callout-content"><strong>Like a human brain</strong><p>It doesn't stop when you're not talking to it. Sleep cycles strengthen important memories. Hunger drives curiosity. The brain regulates itself — just like yours does when you're not consciously thinking about it.</p></div>
+    </div>
+
+    <div class="page-nav" data-animate>
+      <a href="../providers/mcp.html" class="page-nav-link prev"><span class="page-nav-label">Previous</span><span class="page-nav-title">&larr; Any MCP Client</span></a>
+      <a href="knowledge-graph.html" class="page-nav-link next"><span class="page-nav-label">Next</span><span class="page-nav-title">Knowledge Graph &rarr;</span></a>
+    </div>
+    <div class="footer"><span>BrainBase</span><div class="footer-links"><a href="https://github.com/noahsioo/brainbase" target="_blank" rel="noopener">GitHub</a><a href="https://brainbase.dev">Website</a></div></div>
+  </div><aside class="toc"><div class="toc-title">On this page</div><a href="#problem" class="toc-link">The problem</a><a href="#brain" class="toc-link">Mouth vs. brain</a><a href="#different" class="toc-link">Why different</a><a href="#flow" class="toc-link">Data flow</a><a href="#alive" class="toc-link">The brain is alive</a></aside></main>
+</div>
+<div class="search-overlay"><div class="search-modal"><input type="text" class="search-input" placeholder="Search docs..."><div class="search-results"></div></div></div>
+<svg class="noise"><filter id="noiseFilter"><feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch"/></filter><rect width="100%" height="100%" filter="url(#noiseFilter)"/></svg>
+<script src="../docs.js"></script>
+</body></html>
