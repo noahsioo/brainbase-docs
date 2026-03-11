@@ -11,8 +11,8 @@
 <link rel="canonical" href="https://docs.veris.dev/cli/">
 <title>CLI Reference — Veris Docs</title>
 <meta property="og:title" content="CLI Reference — Veris Docs">
-<meta property="og:description" content="All 14 commands to control your brain.">
-<meta name="description" content="All 14 commands to control your brain.">
+<meta property="og:description" content="All 17 commands to control your brain.">
+<meta name="description" content="All 17 commands to control your brain.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://docs.veris.dev/cli/">
 <meta property="og:image" content="https://veris.dev/og.png">
@@ -20,7 +20,7 @@
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="CLI Reference — Veris Docs">
-<meta name="twitter:description" content="All 14 commands to control your brain.">
+<meta name="twitter:description" content="All 17 commands to control your brain.">
 <meta name="twitter:image" content="https://veris.dev/og.png">
 <link rel="stylesheet" href="../styles.css">
 </head>
@@ -71,7 +71,7 @@
   <main class="main">
     <div class="content">
       <h1 data-animate>CLI Reference</h1>
-      <p class="page-desc" data-animate>All 14 commands to control your brain.</p>
+      <p class="page-desc" data-animate>All 17 commands to control your brain.</p>
 
       <!-- init -->
       <h2 id="init" data-animate>veris init</h2>
@@ -273,6 +273,54 @@
         </dl>
       </div>
 
+      <!-- detect -->
+      <h2 id="detect" data-animate>veris detect</h2>
+      <p data-animate>Scan your system for installed AI coding assistants. Shows which providers are detected and their config file paths.</p>
+      <div class="code-block" data-animate>
+        <div class="code-header"><div class="code-dots"><span></span><span></span><span></span></div><span class="code-lang">bash</span><button class="code-copy" onclick="copyCode(this)">Copy</button></div>
+        <pre><code><span class="prompt">$</span> veris detect
+<span class="output">  ✓ Claude Code   ~/.claude/settings.json</span>
+<span class="output">  ✓ Cursor        ~/.cursor/mcp.json</span>
+<span class="output">  ✗ Windsurf</span>
+<span class="output">  ✗ Codex CLI</span>
+<span class="output"></span>
+<span class="output">  2 of 13 providers found</span></code></pre>
+      </div>
+
+      <!-- mcp -->
+      <h2 id="mcp" data-animate>veris mcp</h2>
+      <p data-animate>Register or remove the MCP server for any supported provider. Useful for manual setup or troubleshooting after <code>veris init</code>.</p>
+      <div class="code-block" data-animate>
+        <div class="code-header"><div class="code-dots"><span></span><span></span><span></span></div><span class="code-lang">bash</span><button class="code-copy" onclick="copyCode(this)">Copy</button></div>
+        <pre><code><span class="prompt">$</span> veris mcp install                          <span class="comment"># Default: claude-code</span>
+<span class="prompt">$</span> veris mcp install <span class="flag">--provider</span> cursor        <span class="comment"># For Cursor</span>
+<span class="prompt">$</span> veris mcp uninstall <span class="flag">--provider</span> windsurf   <span class="comment"># Remove from Windsurf</span></code></pre>
+      </div>
+      <div class="cmd-card" data-animate>
+        <h3>Subcommands</h3>
+        <dl class="cmd-options">
+          <dt>install</dt>
+          <dd>Register the MCP server in the provider's config</dd>
+          <dt>uninstall</dt>
+          <dd>Remove the MCP server from the provider's config</dd>
+          <dt>start</dt>
+          <dd>Start MCP server directly (for debugging)</dd>
+        </dl>
+        <h3 style="margin-top:16px">Options</h3>
+        <dl class="cmd-options">
+          <dt>-p, --provider &lt;provider&gt;</dt>
+          <dd>Target provider: <code>claude-code</code> | <code>cursor</code> | <code>windsurf</code> | <code>continue-dev</code> | <code>claude-desktop</code>. Default: <code>claude-code</code></dd>
+        </dl>
+      </div>
+
+      <!-- site -->
+      <h2 id="site" data-animate>veris site</h2>
+      <p data-animate>Open the Veris website in your default browser.</p>
+      <div class="code-block" data-animate>
+        <div class="code-header"><div class="code-dots"><span></span><span></span><span></span></div><span class="code-lang">bash</span><button class="code-copy" onclick="copyCode(this)">Copy</button></div>
+        <pre><code><span class="prompt">$</span> veris site</code></pre>
+      </div>
+
       <div class="page-nav" data-animate>
         <a href="../getting-started/first-session.html" class="page-nav-link prev">
           <span class="page-nav-label">Previous</span>
@@ -306,6 +354,9 @@
       <a href="#snapshot" class="toc-link">snapshot</a>
       <a href="#dashboard" class="toc-link">dashboard</a>
       <a href="#embed" class="toc-link">embed</a>
+      <a href="#detect" class="toc-link">detect</a>
+      <a href="#mcp" class="toc-link">mcp</a>
+      <a href="#site" class="toc-link">site</a>
     </aside>
   </main>
 </div>
