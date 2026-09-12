@@ -1,7 +1,7 @@
 {
-  "name": "Veris Docs",
-  "short_name": "Veris Docs",
-  "description": "Documentation for Veris — a real brain for every AI.",
+  "name": "BrainBase Docs",
+  "short_name": "BrainBase Docs",
+  "description": "Documentation for BrainBase — a real brain for every AI.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#0A0A0F",

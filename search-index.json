@@ -1,6 +1,6 @@
 [
-  {"title":"Home","description":"Veris Documentation — Your AI forgets everything. Give it a real brain.","url":"/","keywords":["veris","install","getting started","overview"]},
-  {"title":"Installation","description":"Get Veris running in under 30 seconds.","url":"/getting-started/installation.html","keywords":["install","npm","node","prerequisites","setup"]},
+  {"title":"Home","description":"BrainBase Documentation — Your AI forgets everything. Give it a real brain.","url":"/","keywords":["brainbase","install","getting started","overview"]},
+  {"title":"Installation","description":"Get BrainBase running in under 30 seconds.","url":"/getting-started/installation.html","keywords":["install","npm","node","prerequisites","setup"]},
   {"title":"Quick Start","description":"Initialize your brain and connect your AI providers.","url":"/getting-started/quick-start.html","keywords":["init","watcher","setup","wizard","configure"]},
   {"title":"First Session","description":"What happens behind the scenes in your first conversation.","url":"/getting-started/first-session.html","keywords":["first","session","thalamus","extraction","senses","learning"]},
   {"title":"CLI Reference","description":"All 17 commands to control your brain.","url":"/cli/","keywords":["cli","commands","search","list","hot","stats","add","forget","watcher","consolidate","verify","snapshot","dashboard","embed","init","status"]},
